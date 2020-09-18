@@ -1,0 +1,25 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color : skyblue;
+  }
+  li {
+    float: left;
+    text-decoration: none;
+   
+  }
+  ul li {
+    display: block;
+    color: white;
+    width: 20%;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    padding: 10px;;
+  }
+  ul li:hover {
+    background-color: pink;
+  }
+  
