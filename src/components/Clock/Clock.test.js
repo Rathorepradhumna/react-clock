@@ -19,3 +19,4 @@ it('display date when toggle button is clicked',()=>{
     wrapper.find("#toggle").simulate('click')
     expect(wrapper.find('#date').text()).toEqual("")
   })
+  
