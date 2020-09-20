@@ -4,15 +4,16 @@ const CurrentWeather = (props) =>{
     let d = new Date();
     let h = d.getHours();
     let m = d.getMinutes();
+    let iconSrc = `http://openweathermap.org/img/wn/${props.weather.curicon}.png`;
     return(
         <div className={classes.currentweatherdisplay} style={{position: 'relative'}}>
         <div className={classes.weatherlocation}>Indore</div>
     <div className="weather-min-max-temp">{props.weather.maxtemp} | {props.weather.mintemp}</div>
         <div className={classes.weathercurrent}>                
-            <span className={classes.weathercurrent}>{parseInt(props.weather.temp)} <sup>f</sup></span>
+            <span className={classes.weathercurrent}><big>{parseInt(props.weather.temp)}</big> <sup>c</sup></span>
         </div>
         <div className={classes.weathercondition}>
-            <img className={classes.weathericon} src={props.weather.curicon} alt="img" />
+            <img className={classes.weathericon} src={iconSrc} alt="img" />
     <span className={classes.weatherdescription}>{props.weather.curmain} </span>
         </div>            
         

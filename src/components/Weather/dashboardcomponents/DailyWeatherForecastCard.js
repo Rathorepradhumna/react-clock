@@ -18,7 +18,7 @@ const DailyWeatherForecastCard = (props) =>{
     let date = new Date(props.everyDay.dt * 1000)
     date = String(date)
    date = date.split(' ')
-   // console.log(date)
+   console.log(date)
    
     return( 
         <div className={[classes.DailyWeatherCard,"card"].join(' ')}>

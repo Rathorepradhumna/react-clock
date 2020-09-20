@@ -13,9 +13,7 @@ class Dashboard extends Component{
         current : {
 
         },
-        hourly :{
-
-        },
+        hourly :[],
         daily : []
 
     }
@@ -29,7 +27,7 @@ class Dashboard extends Component{
                   console.log(pos)
                   this.setState({userPositon:pos})
                   console.log(this.state.userPositon)
-                axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${this.state.userPositon.latitude}&lon=${this.state.userPositon.longitude}&units=metric&appid=`)
+                axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${this.state.userPositon.latitude}&lon=${this.state.userPositon.longitude}&units=metric&appid={key}`)
                 .then(response=>{
                    // console.log(response)
                     let cur_weather = {
@@ -47,6 +45,10 @@ class Dashboard extends Component{
                     
                     this.setState({daily:dailyWeather})
                     console.log(this.state.daily)
+                    let hourlyWeather = response.data.hourly.slice(0,12);
+                    this.setState({hourly:hourlyWeather})
+                    console.log(this.state.hourly);
+
                 })
          })
         }
@@ -58,8 +60,8 @@ class Dashboard extends Component{
         return(
            <div>
               <CurrentWeather  weather = {this.state.current}/>
-             <DailyWeather weatherDaily={this.state.daily} name='padhumna'/>
-               <HourlyWeather  />
+             <DailyWeather weatherDaily={this.state.daily}/>
+               <HourlyWeather weatherHourly={this.state.hourly} />
             </div>
 
         )
