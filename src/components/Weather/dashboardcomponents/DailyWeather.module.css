@@ -1,38 +1,25 @@
-  
-$daily-weather-display-height: 170px;
-$daily-weather-display-background-color : #CFD8DC;
 
-.dailyweathercard {
-    height: $daily-weather-display-height - 20px;
+.DailyWeatherCard{
     text-align: center;
+    background-color: #DBDDE2;
+    float:left;
+    border-radius: 0;
+    border:none;
 }
 
-.dailyweathercard .icon {
+.Temp{
+    font-size: 0.9rem;
+    vertical-align: middle;
+    font-weight: 700;
+}
+
+.Img{
     height: 50px;
     max-width: 50px;
 }
 
-.dailyweatherdisplay {
-    background-color: $daily-weather-display-background-color;
-    height: $daily-weather-display-height;
-    position: relative;
-    width: 100%;
-}
-
-.dailyweatherdisplay .carousel {
-    background-color: $daily-weather-display-background-color;
-    position: absolute;
-    width: 100%;
-}
-
-.dailyweatherdisplay .carouselnav {
-    cursor: pointer;
-    line-height: $daily-weather-display-height - 20px;
-    opacity: 0.5;
-    position: absolute;
-    z-index: 10;
-}
-
-.dailyweatherdisplay .carouselnav > i {
+.Description{
+    font-size: 1rem;
     vertical-align: middle;
+    font-weight: 400;
 }

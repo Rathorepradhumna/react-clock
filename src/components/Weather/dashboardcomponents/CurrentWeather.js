@@ -12,7 +12,7 @@ const CurrentWeather = (props) =>{
             <span className={classes.weathercurrent}>{parseInt(props.weather.temp)} <sup>f</sup></span>
         </div>
         <div className={classes.weathercondition}>
-            <img className={classes.weathericon} src={props.weather.curicon} aly="img" />
+            <img className={classes.weathericon} src={props.weather.curicon} alt="img" />
     <span className={classes.weatherdescription}>{props.weather.curmain} </span>
         </div>            
         

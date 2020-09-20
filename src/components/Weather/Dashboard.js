@@ -29,7 +29,7 @@ class Dashboard extends Component{
                   console.log(pos)
                   this.setState({userPositon:pos})
                   console.log(this.state.userPositon)
-                axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${this.state.userPositon.latitude}&lon=${this.state.userPositon.longitude}&units=metric&appid=4ac5e4d2c1f5ac4c8792922f04512c0f`)
+                axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${this.state.userPositon.latitude}&lon=${this.state.userPositon.longitude}&units=metric&appid=`)
                 .then(response=>{
                    // console.log(response)
                     let cur_weather = {
@@ -43,9 +43,8 @@ class Dashboard extends Component{
                     }
                     this.setState({current:cur_weather})
                     console.log(this.state.current)
-                    let dailyWeather = [
-                        response.data.daily
-                    ]
+                    let dailyWeather =  response.data.daily
+                    
                     this.setState({daily:dailyWeather})
                     console.log(this.state.daily)
                 })
